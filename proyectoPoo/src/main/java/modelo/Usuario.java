@@ -5,6 +5,7 @@
  */
 package modelo;
 
+import java.util.Scanner;
 /**
  *
  * @author Chris
@@ -56,8 +57,17 @@ public Usuario(String nombre, int contrasena){
     }
     
     public void ingresar(String nombre, int contrasena){
-        if(nombre == this.nombre && contrasena == this.contrasena){
-            
+        String nom = getNombre();
+        int con= getContrasena();
+        if(nombre == nom && contrasena == con){
+            setIngresado(true);
+        }else{
+            System.out.print("Nomnre o Contraseña incorrectos\n Digite nuevamente\n Nombre: ");
+            Scanner entrada=new Scanner(System.in);
+            nombre =entrada.nextLine();
+            System.out.print("Contraseña: ");
+            Scanner entrada2=new Scanner(System.in);
+            contrasena =entrada2.nextInt();
         }
     }
 }
