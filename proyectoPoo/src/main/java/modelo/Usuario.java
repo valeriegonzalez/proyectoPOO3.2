@@ -62,12 +62,15 @@ public Usuario(String nombre, int contrasena){
         if(nombre == nom && contrasena == con){
             setIngresado(true);
         }else{
-            System.out.print("Nomnre o Contraseña incorrectos\n Digite nuevamente\n Nombre: ");
-            Scanner entrada=new Scanner(System.in);
-            nombre =entrada.nextLine();
-            System.out.print("Contraseña: ");
-            Scanner entrada2=new Scanner(System.in);
-            contrasena =entrada2.nextInt();
+            while(nombre != nom || contrasena != con){
+                System.out.print("Nomnre o Contraseña incorrectos\n Digite nuevamente\n Nombre: ");
+                Scanner entrada=new Scanner(System.in);
+                nombre =entrada.nextLine();
+                System.out.print("Contraseña: ");
+                Scanner entrada2=new Scanner(System.in);
+                contrasena =entrada2.nextInt();
+            }
+            setIngresado(true);
         }
     }
 }
