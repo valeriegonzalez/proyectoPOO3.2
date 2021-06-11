@@ -16,13 +16,14 @@ public class Usuario {
     protected boolean ingresado;
     protected boolean bloqueado;
     
-    
-public Usuario(String nombre, int contrasena){
-    this.nombre = nombre;
-    this.contrasena = contrasena;
-    this.ingresado = false;
-    this.bloqueado = false;
-    }
+    public Usuario(){}    
+
+    public Usuario(String nombre, int contrasena, boolean bloqueado, boolean ingresado){
+        this.nombre = nombre;
+        this.contrasena = contrasena;
+        this.ingresado = ingresado;
+        this.bloqueado = bloqueado;
+        }
 
     public String getNombre() {
         return nombre;
